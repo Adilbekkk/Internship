@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABC Education</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      <div class="navbar-area">
+      <nav class="navbar">
+        <button id="share-button">Share</button>  
+        <button id="comment-btn"><i class="fas fa-comment"></i>
+        </button>
+        <button id="signup-btn"><i class="fas fa-user-plus"></i>
+        </button> 
+        <button id="fullscreen-btn"><i class="fas fa-expand"></i>
+        </button>
+      </nav>
+    </div>
+    </header>
+    <header>
+  
+
+    
+
+    <section class="iframe-container">
+      <iframe id="iframe" src="page1.html"></iframe>
+    </section>
+    <div style="display:flex; gap:50px;">
+    <div class="iframe-navigation">
+      <button data-page="1">1</button>
+      <button data-page="2">2</button>
+      <button data-page="3">3</button>
+      <button data-page="4">4</button>
+      <button data-page="5">5</button>
+    </div>
+  
+    <button id="reset-btn">Reset</button>
+  </div>
+
+    <div id="signup-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+          <input type="text" id="full-name" placeholder="Full Name" required />
+          <input
+            type="text"
+            id="phone-number"
+            placeholder="Phone Number"
+            required
+          />
+          <input type="text" id="email" placeholder="Email" required />
+          <button type="submit">Sign Up</button>
+        </form>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+      </div>
+    </div>
+
+    <div id="share-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Share this page</h2>
+        <input type="text" id="link-input" readonly />
+        <button id="copyLink">Copy link</button>
+        <hr />
+        <input
+          type="email"
+          id="email-input"
+          placeholder="Enter email address"
+        />
+        <button id="send-email">Send</button>
+      </div>
+    </div>
+
+    
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>
